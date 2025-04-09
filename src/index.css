@@ -1,0 +1,89 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 30% 98%;
+    --foreground: 90 7% 12%;
+
+    --card: 60 30% 98%;
+    --card-foreground: 90 7% 12%;
+
+    --popover: 60 30% 98%;
+    --popover-foreground: 90 7% 12%;
+
+    --primary: 15 18% 60%;
+    --primary-foreground: 60 30% 98%;
+
+    --secondary: 24 20% 92%;
+    --secondary-foreground: 20 10% 32%;
+
+    --muted: 24 20% 92%;
+    --muted-foreground: 20 5% 50%;
+
+    --accent: 20 15% 85%;
+    --accent-foreground: 20 40% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 30% 98%;
+
+    --border: 20 15% 88%;
+    --input: 20 15% 88%;
+    --ring: 15 18% 60%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 90 7% 12%;
+    --foreground: 60 30% 98%;
+
+    --card: 90 7% 12%;
+    --card-foreground: 60 30% 98%;
+
+    --popover: 90 7% 12%;
+    --popover-foreground: 60 30% 98%;
+
+    --primary: 15 15% 50%;
+    --primary-foreground: 60 30% 98%;
+
+    --secondary: 20 10% 20%;
+    --secondary-foreground: 60 30% 98%;
+
+    --muted: 20 10% 20%;
+    --muted-foreground: 20 5% 65%;
+
+    --accent: 20 10% 25%;
+    --accent-foreground: 60 30% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 30% 98%;
+
+    --border: 20 10% 30%;
+    --input: 20 10% 30%;
+    --ring: 15 15% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
